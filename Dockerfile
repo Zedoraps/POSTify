@@ -10,8 +10,6 @@ RUN go mod download && go mod verify
 COPY . .
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build  -v -ldflags="-w -s" .
 
-RUN ./pim-cli download --verbose --nexus-username=$NEXUS_USERNAME --nexus-password=$NEXUS_PASSWORD ./output
-
 FROM alpine:3.18
 
 COPY --from=build /build/POSTify /usr/local/bin/POSTify
