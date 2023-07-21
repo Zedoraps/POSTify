@@ -4,6 +4,7 @@ The simple and effective solution to POSTify your requests.
 
 Reverse-proxy example/inspiration by https://gist.github.com/JalfResi/6287706
 
+Every GET request will automatically be rewritten to a POST request. 
 
 ## RUN
 
